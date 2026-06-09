@@ -16,4 +16,5 @@ export type User = {
   phone: string;
   web: string;
   dob: string;
+  portraitId: number;
 };

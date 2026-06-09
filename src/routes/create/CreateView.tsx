@@ -8,10 +8,15 @@ import { useNavigate } from "react-router-dom";
 
 function CreateView() {
   const { usersDispatch } = useContext(UserContext);
+
   const navigate = useNavigate();
 
   function handleSubmitUser(user: User) {
-    usersDispatch({ type: "ADD_USER", user: user });
+    const userWithStableImage = {
+      ...user,
+      portraitId: Math.floor(Math.random() * 100),
+    };
+    usersDispatch({ type: "ADD_USER", user: userWithStableImage });
     alert("Added user");
     navigate(-1);
   }

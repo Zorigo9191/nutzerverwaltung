@@ -34,7 +34,7 @@ function UserCard({ user }: UserCardProps) {
           className="usercard-header-image"
           src={`https://randomuser.me/api/portraits/${
             user.gender === Gender.FEMALE ? "women" : "men"
-          }/${Math.floor(Math.random() * 100)}.jpg`}
+          }/${user.portraitId}.jpg`}
           alt="User Profile"
         />
       </div>

@@ -12,7 +12,6 @@ type UserFormProps = {
 };
 
 function UserForm({ user, onSubmit }: UserFormProps) {
-  console.log(user?.name);
   const userNameProps = UseFormInput(user?.name ?? "", true);
   const dobProps = UseFormInput(user?.dob ?? "", true);
   const genderProps = UseFormInput(user?.gender ?? "", true);
@@ -72,6 +71,7 @@ function UserForm({ user, onSubmit }: UserFormProps) {
         address: addressProps.value,
         phone: telephoneProps.value,
         web: websiteProps.value,
+        portraitId: 0,
       };
 
       onSubmit(submittedUser);
