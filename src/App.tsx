@@ -5,7 +5,7 @@ import Overview from "./routes/overview/Overview";
 import CreateView from "./routes/create/CreateView";
 import EditView from "./routes/edit/EditView";
 import UserManagementReducer from "./hooks/UserManagementReducer";
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { UserContext } from "./context/UserContext";
 import type { User } from "./types/user/User";
 
@@ -27,6 +27,10 @@ function App() {
     [],
     fetchInitUserData,
   );
+
+  useEffect(() => {
+    localStorage.setItem("users", JSON.stringify(users));
+  }, [users]);
 
   function fetchInitUserData(): User[] {
     const stringUsers = localStorage.getItem("users");
