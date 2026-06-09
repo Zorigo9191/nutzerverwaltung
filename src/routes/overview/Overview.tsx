@@ -10,7 +10,10 @@ function Overview() {
   return (
     <div className="overview-body">
       {users.map((user) => (
-        <Link to={`/edit/${user.id}`} key={`usercardLink-${user.id}`}>
+        <Link
+          to={`/nutzerverwaltung/edit/${user.id}`}
+          key={`usercardLink-${user.id}`}
+        >
           <UserCard key={user.id} user={user} />
         </Link>
       ))}

@@ -8,7 +8,7 @@ import {
   faPhone,
   faVenusMars,
 } from "@fortawesome/free-solid-svg-icons";
-import type { User } from "../../types/user/User";
+import { Gender, type User } from "../../types/user/User";
 import DeleteButton from "../deleteButton/DeleteButton";
 import { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
@@ -32,7 +32,9 @@ function UserCard({ user }: UserCardProps) {
       <div className="usercard-header">
         <img
           className="usercard-header-image"
-          src="http://randomuser.me/api/portraits/men/75.jpg"
+          src={`https://randomuser.me/api/portraits/${
+            user.gender === Gender.FEMALE ? "women" : "men"
+          }/${Math.floor(Math.random() * 100)}.jpg`}
           alt="User Profile"
         />
       </div>
