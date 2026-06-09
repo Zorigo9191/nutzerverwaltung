@@ -1,0 +1,40 @@
+@use "../../variables" as *;
+
+.usercard-container {
+  background-color: $background;
+  border-radius: 1rem;
+  border: $border;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  color: $text-color;
+  font-weight: 600;
+  box-shadow: $box-shadow;
+}
+
+.usercard-header {
+  border-right: solid 1px gray;
+  padding: 1rem;
+}
+
+.usercard-header-image {
+  border-radius: 1rem;
+}
+
+.usercard-body {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.usercard-body-content {
+  display: flex;
+  gap: 1rem;
+}
+
+.usercard-data-icon {
+  margin-right: 0.5rem;
+  max-width: 21px;
+  width: 21px;
+}

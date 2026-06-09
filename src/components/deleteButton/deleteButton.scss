@@ -1,0 +1,16 @@
+@use "../../variables" as *;
+
+.delete-button {
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  border-radius: 100%;
+  border: solid 1px $danger;
+  color: $danger;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,17 @@
+@use "../../variables" as *;
+
+.input-text {
+  background-color: $input-background;
+  padding: 0.8rem;
+  border: $border;
+  border-radius: $border-radius;
+  font-size: $fontsize;
+}
+
+.input-text:focus {
+  outline: solid 1px $button-hover-color;
+}
+
+.input-error {
+  color: $danger;
+}

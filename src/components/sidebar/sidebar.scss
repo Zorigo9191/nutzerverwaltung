@@ -1,0 +1,44 @@
+@use "../../variables" as *;
+
+.sidebar-container {
+  background-color: $background;
+  border-right: solid 2px #555;
+  height: 100%;
+}
+
+.sidebar-header {
+  height: 4rem;
+  border-bottom: solid 1px #494848;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-header-image {
+  height: 91%;
+  border-radius: $border-radius;
+}
+
+.sidebar-body {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.7rem;
+}
+
+.sidebar-item {
+  background-color: $button-color;
+  padding: 1rem;
+  border: none;
+  border-radius: $border-radius;
+  width: 100%;
+  text-align: left;
+  font-size: $fontsize;
+  box-shadow: $box-shadow;
+}
+
+.sidebar-item:hover {
+  background-color: $button-hover-color;
+  transition: $transition;
+}

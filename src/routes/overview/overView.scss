@@ -1,0 +1,7 @@
+@use "../../variables" as *;
+
+.overview-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}

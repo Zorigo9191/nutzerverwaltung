@@ -1,0 +1,18 @@
+@use "../../variables" as *;
+
+.submit-button {
+  background-color: $button-color;
+  border: none;
+  padding: 0.8rem;
+  border-radius: $border-radius;
+  color: $text-color;
+  max-width: 25rem;
+  font-size: $fontsize;
+  font-weight: $font-weight-600;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $button-hover-color;
+    transition: $transition;
+  }
+}
